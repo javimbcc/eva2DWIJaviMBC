@@ -7,6 +7,10 @@ import org.springframework.stereotype.Controller;
 import exmn.hibernate.dao.AlumnoEva;
 import exmn.hibernate.impl.ConsultasPostgreSQL;
 
+/*
+ * El controlador de nuestra aplicacion que lanza las consultas
+ * @author Jmenabc
+ */
 
 @Controller
 public class controller {
@@ -20,16 +24,19 @@ public class controller {
 		//ejecutamos la consulta que nos trae todos los datos de todas las evaluaciones
 		//System.out.println(pg.buscarTodasEvaluaciones());
 		//ejecutamos la consuta que nos trae los registros de la primera evaluacion
-		System.out.println(pg.buscarEva1());
+		//System.out.println(pg.buscarEva1());
 		//ejecutamos la consulta que nos trae registros de la segunda evaluacion
 		//System.out.println(pg.buscarEva2());
 		//ejecutamos la consulta que nos trae registros de la tercera evaluacion
 		//System.out.println(pg.buscarEva3().toString());
-
+		
 		//ejecutamos la consulta que nos añade registros
 		//Nos hacemos nuestro ejemplo
 		//AlumnoEva ej1 = new AlumnoEva("ejemplo","JavierMena","10","PC",10000);
 		//pg.insertarDatos(ej1);
+		
+		//Buscar por codigo de alumno
+		System.out.println(pg.buscarPorCodAlumno("frg45egrf"));
 	}
 
 }

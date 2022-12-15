@@ -47,7 +47,7 @@ public class AlumnoEvaImpl implements EvaluacionServicio {
 	}
 	//metodo para listar por codigo de alumno
 	public List<AlumnoEva> buscarPorCodAlumno(String codEva) {
-		return em.createQuery("SELECT Alumno FROM eva_tch_notas_evaluacion WHERE cod_alumno='' Alumno").getResultList();
+		return em.createQuery("SELECT Alumno FROM AlumnoEva Alumno WHERE cod_alumno= {codEva}").getResultList();
 	}
 
 }

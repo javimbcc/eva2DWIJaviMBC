@@ -46,4 +46,10 @@ public class ConsultasPostgreSQL {
 	public List<AlumnoEva> buscarEva3() {
 		return aei.buscarEvaluacionTres();
 	}
+	
+	//Buscar por cod alumnos
+	
+	public List<AlumnoEva> buscarPorCodAlumno(String codAlumn) {
+		return aei.buscarPorCodAlumno(codAlumn);
+	}
 }
